@@ -16,8 +16,10 @@ app.use(cors({
     origin: '*'
 }));
 
-const PORT = process.env.PORT || 5000;
-
+const PORT = process.env.PORT || 4000;
+app.get('/', (req,res)=> {
+    res.send("password reset backend")
+})
 //Create User
 app.post('/register', register)
 //Login
